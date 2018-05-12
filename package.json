@@ -1,0 +1,14 @@
+{
+  "name": "omnisone",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "pg": "^7.4.3",
+    "randomstring": "^1.1.5",
+    "sequelize": "^4.37.7"
+  }
+}
