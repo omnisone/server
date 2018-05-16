@@ -9,3 +9,5 @@ const Song = sequelize.define('song', {
     magnet: { type: Sequelize.STRING },
     contractAddress: { type: Sequelize.STRING },    
 })
+
+module.exports = Song

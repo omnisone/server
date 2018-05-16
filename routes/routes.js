@@ -16,7 +16,7 @@ module.exports.app = app
 module.exports.api = api
 
 //require routes
-
+require('./song')
 
 //start server
 const port = 7707
