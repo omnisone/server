@@ -18,3 +18,9 @@ api.post('/songs', (req, res) => {
         })
     })
 })
+
+api.post('/songs/search', (req, res) => {
+    Song.searchForSong(req.body.terms,(results) => {
+        res.send(results)
+    })
+})
