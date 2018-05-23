@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../db/sql')
 
-const Song = sequelize.define('song', {
+const Song = sequelize.define('Song', {
     id: { type: Sequelize.UUID, primaryKey: true, defaultValue: Sequelize.UUIDV4, allowNull: false },
     name: { type: Sequelize.STRING },
     duration: { type: Sequelize.INTEGER },
@@ -23,13 +23,14 @@ const Song = sequelize.define('song', {
     }
 })
 
-const searchForSong = (searchTerms,callback) => {
+Song.searchForSong = (searchTerms,callback) => {
     if(!searchTerms) return
     const rawWordList = searchTerms.split(' ')
     rawWordList.map((word,index) => {
         rawWordList[index] = '%' + word.toLowerCase() + '%'
     })
     let query = "SELECT * FROM songs WHERE keywords LIKE"
+    console.log("word list",rawWordList)
     rawWordList.forEach((word,index) => {
         query += " ? AND keywords LIKE"
     })
@@ -43,4 +44,3 @@ const searchForSong = (searchTerms,callback) => {
 }
 
 module.exports = Song
-module.exports.searchForSong = searchForSong
