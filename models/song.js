@@ -29,7 +29,7 @@ Song.searchForSong = (searchTerms,callback) => {
     rawWordList.map((word,index) => {
         rawWordList[index] = '%' + word.toLowerCase() + '%'
     })
-    let query = "SELECT * FROM songs WHERE keywords LIKE"
+    let query = "SELECT * FROM \"Songs\" WHERE keywords LIKE"
     console.log("word list",rawWordList)
     rawWordList.forEach((word,index) => {
         query += " ? AND keywords LIKE"

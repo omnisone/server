@@ -7,7 +7,7 @@ const Artist = sequelize.define('Artist', {
     name: { type: Sequelize.STRING },
 })
 
-Artist.hasMany(Song, {as: 'Songs', foreignKey: 'song_id'})
-Song.belongsTo(Artist,{foreignKey: 'song_id'})
+Artist.hasMany(Song, {as: 'Songs', foreignKey: 'artist_id'})
+Song.belongsTo(Artist,{foreignKey: 'artist_id'})
 
 module.exports = Artist

@@ -1,5 +1,5 @@
 /**
- * Song JSON REST API
+ * Artist JSON REST API
  */
 
 const routes = require('./routes')
@@ -9,7 +9,7 @@ const Artist = require('../models/artist')
 const api = routes.api
 
 /**
- * Add song to database
+ * Add artist to database
  */
 api.post('/artists', (req, res) => {
     Artist.sync().then(() => {
