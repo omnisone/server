@@ -30,7 +30,7 @@ api.post('/song', (req, res) => {
     })
 })
 
-api.post('/songs/search', (req, res) => {
+api.post('/song/search', (req, res) => {
     Song.searchForSong(req.body.terms,(results) => {
         res.send(results)
     })

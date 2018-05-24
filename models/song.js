@@ -11,15 +11,24 @@ const Song = sequelize.define('Song', {
     keywords: { type: Sequelize.STRING }
 }, {
     hooks: {
-        beforeSave: (instance, options) => {
+        afterSave: (instance, options) => {
             let keywords = []
             const nameKeyword = instance.name.toLowerCase()
             let genreKeyword = []
             if(instance.genre) genreKeyword = instance.genre.toLowerCase().split(' ')
             keywords.push(nameKeyword)
             keywords = keywords.concat(genreKeyword)
-            instance.keywords = keywords.join(',')
-            if(!instance.album_id) instance.album_id = "self"
+            if(instance.artist_id) {
+                instance.getArtist().then((artist) => {
+                    const artistKeywords = artist.dataValues.name.toLowerCase().split(' ')
+                    keywords = keywords.concat(artistKeywords)
+                    instance.keywords = keywords.join(',')
+                    instance.save()
+                })
+            } else {
+                instance.keywords = keywords.join(',')
+                instance.save()
+            }
         }
     }
 })
