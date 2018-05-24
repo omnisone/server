@@ -23,5 +23,5 @@ require('./artist')
 const port = 7707
 
 const server = app.listen(port, () => {
-  console.log("Running on port " + port)
+  console.log("API running on port " + port)
 })

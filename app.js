@@ -5,3 +5,6 @@
 require('./db/db')
 
 require('./routes/routes.js')
+
+//trackers
+require('./tracker')
