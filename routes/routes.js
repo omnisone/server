@@ -18,6 +18,7 @@ module.exports.api = api
 //require routes
 require('./song')
 require('./artist')
+require('./album')
 
 //start server
 const port = 7707

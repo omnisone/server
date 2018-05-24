@@ -1,14 +1,17 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../db/sql')
-const Artist = require('./artist')
 const Song = require('./song')
+const Artist = require('./artist')
 
-const Artist = sequelize.define('Artist', {
+const Album = sequelize.define('Album', {
     id: { type: Sequelize.UUID, primaryKey: true, defaultValue: Sequelize.UUIDV4, allowNull: false },
     name: { type: Sequelize.STRING },
 })
 
-Artist.hasMany(Song, {as: 'Songs', foreignKey: 'artist_id'})
-Song.belongsTo(Artist,{foreignKey: 'artist_id'})
+Album.hasMany(Song, {as: 'Songs', foreignKey: 'album_id'})
+Song.belongsTo(Album,{foreignKey: 'album_id'})
 
-module.exports = Artist
+Artist.hasMany(Album,{as: 'ArtistAlbums', foreignKey: 'artist_id'})
+Album.belongsTo(Artist,{foreignKey: 'artist_id'})
+
+module.exports = Album

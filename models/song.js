@@ -19,6 +19,7 @@ const Song = sequelize.define('Song', {
             keywords.push(nameKeyword)
             keywords = keywords.concat(genreKeyword)
             instance.keywords = keywords.join(',')
+            if(!instance.album_id) instance.album_id = "self"
         }
     }
 })

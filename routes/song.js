@@ -22,7 +22,7 @@ api.get('/song/:id', (req,res) => {
 /**
  * Add song to database
  */
-api.post('/songs', (req, res) => {
+api.post('/song', (req, res) => {
     Song.sync().then(() => {
         Song.create(req.body).then((song) => {
             res.json(song.get())

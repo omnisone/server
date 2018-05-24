@@ -22,7 +22,7 @@ api.get('/album/:id', (req,res) => {
 /**
  * Add album to database
  */
-api.post('/albums', (req, res) => {
+api.post('/album', (req, res) => {
     Album.sync().then(() => {
         Album.create(req.body).then((album) => {
             res.json(album.get())
