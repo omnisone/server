@@ -20,6 +20,9 @@ require('./song')
 require('./artist')
 require('./album')
 
+//static files
+app.use(express.static('public'))
+
 //start server
 const port = 7707
 

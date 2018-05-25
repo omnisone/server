@@ -1,0 +1,121 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.cover {
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(45deg, #ff6a00, #8f49ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(45deg, #ff6a00, #8f49ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    position: absolute; 
+}
+
+.contentArea {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.introArea {
+    color: #FFF;
+    margin-top: 30vh;
+    font-family: 'Archivo', sans-serif;
+}
+
+.introArea h1 {
+    font-size: 6rem;
+}
+
+.introArea p.lead {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+@media(max-width: 800px) {
+    .introArea {
+        margin-top: 15vh;
+    }
+
+    .introArea h1 {
+        font-size: 4rem;
+    }
+    
+    .introArea p.lead {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+}
+
+.btn-xl {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 28px;
+       -moz-border-radius: 28px;
+            border-radius: 28px;
+    text-transform: none;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+}
+
+.logoArea {
+    padding-top: 16px;
+}
+
+.mainContent {
+    position: relative;
+    z-index: 90;
+    margin-top: 100vh;
+    font-family: 'Archivo', sans-serif;
+}
+
+.mainContent h1 {
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+    padding-top: 32px;
+    font-weight: 600;
+}
+
+.mainContent img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.arpasi {
+    background: #a770ef; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.rothwell {
+    background: #134e5e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #134e5e, #71b280); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #134e5e, #71b280); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.vijayan {
+    background: #EB3349;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+.footer {
+    background-color: #e4e4e4;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.footer p {
+    margin: 0;
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    color: #6d6d6d;
+}
