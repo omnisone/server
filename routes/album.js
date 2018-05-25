@@ -29,3 +29,14 @@ api.post('/album', (req, res) => {
         })
     })
 })
+
+/**
+ * Get songs for album
+ */
+api.get('/album/:id/songs', (req, res) => {
+    Song.sync().then(() => {
+        Song.findAll({where: {album_id: req.params.id}}).then((songs) => {
+            res.json(songs)
+        })
+    })
+})
